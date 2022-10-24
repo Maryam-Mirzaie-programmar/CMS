@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MyCms.Models.PageComment>
+
+<header> <i class="fa fa-comments"></i><h5> دیدگاه کاربران </h5><span> @Model.Count() دیدگاه </span> </header>
+<ul>
+    @foreach (var item in Model)
+    {
+        <!-- start each comment -->
+        <li>
+            <img src="/Content/img/thumb.png">
+            <div>
+                <span> @item.Name </span>
+                <span> @item.CreateDate.ToShamsi() </span>
+            </div>
+            <p>
+                @item.Comment
+            </p>
+        </li>
+        <!-- end each comment -->
+    }
+</ul>
+
+

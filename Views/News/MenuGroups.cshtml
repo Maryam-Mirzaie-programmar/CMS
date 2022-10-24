@@ -1,0 +1,11 @@
+﻿@model IEnumerable<MyCms.Models.PageGroup>
+
+<span>گروه های خبری</span>
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li><a href="/Archieve/@item.GroupId/@item.GroupTitle">@item.GroupTitle </a></li>
+    }
+
+</ul>
